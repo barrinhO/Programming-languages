@@ -1,4 +1,8 @@
-alert("Digite em letras minúsculas!");
+document
+  .getElementById("campo-pesquisa")
+  .addEventListener("input", function () {
+    this.value = this.value.toLowerCase();
+  });
 
 function pesquisar() {
   let section = document.getElementById("resultados-pesquisa");
@@ -12,7 +16,6 @@ function pesquisar() {
 
   let title = "";
   let resultados = "";
-  let tags = "";
 
   for (let dado of dados) {
     title = dado.title.toLowerCase();
